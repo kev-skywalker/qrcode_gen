@@ -1,11 +1,8 @@
-import pyqrcode
-from pyqrcode import QRCode
+import qrcode_module.qrcodegen as qr
 
-# String which represent the QR code
-s = "https://www.youtube.com/channel/UCeO9hPCfRzqb2yTuAn713Mg"
 
-# Generate QR code
-url = pyqrcode.create(s)
+print("-------QRCODE_GENERATOR---------\n")
+addr =  input("Insert the url page you want to transform into QRcode: ")
+filename = input("\nInsert the name of your QRcode file:")
 
-# Create and save the png file naming "myqr.png"
-url.svg("myyoutube.svg", scale = 8) 
+qr.generateQRcode(addr,filename)
